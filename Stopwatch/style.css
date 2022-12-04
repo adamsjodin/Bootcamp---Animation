@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(203, 203, 203);
+}
+
+
+.watch-background {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid rgb(166, 165, 165);
+    position: relative;
+}
+
+.watch-minute {
+    height: 100px;
+    width: 4px;
+    background-color: gray;
+    animation: rotate 20s infinite;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    transform-origin: 50% 100%;
+
+}
+
+.watch-second {
+    height: 100px;
+    width: 1px;
+    background-color: rgb(255, 0, 0);
+    animation: rotate 10s infinite;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    transform-origin: 50% 100%;
+    animation-delay: 1s;
+
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
